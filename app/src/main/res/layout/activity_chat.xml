@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ChatActivity">
+
+    <!-- Toolbar Layout -->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m_toolbar_height">
+
+        <ImageButton
+            android:id="@+id/toolbarBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_white"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:padding="16dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/toolbarProfileIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:background="@color/colorGray01"
+            android:src="@drawable/ic_person_white"
+            android:layout_toStartOf="@id/toolbarTitleTv"
+            app:shapeAppearanceOverlay="@style/ImageStyle_circle" />
+
+        <TextView
+            android:id="@+id/toolbarTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_centerInParent="true"
+            tools:text="@tools:sample/full_names" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray01"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <!-- RecyclerView for Chat Messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRl"
+        android:layout_above="@id/view1"
+        tools:listitem="@layout/row_chat_left"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/chatInputRl"
+        android:background="@color/colorGray01">
+
+    </View>
+
+
+    <RelativeLayout
+        android:id="@+id/chatInputRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp">
+
+        <EditText
+            android:id="@+id/messageEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Typing..."
+            android:background="@drawable/shape_edittext"
+            android:inputType="textMultiLine|textCapSentences"
+            android:padding="10dp"
+            android:layout_toStartOf="@id/attachFab"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="8dp"
+            android:imeOptions="actionSend" /> <!-- This enables the "Send" action -->
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/attachFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_image_gray"
+            app:elevation="0dp"
+            app:fabSize="normal"
+            android:layout_marginEnd="8dp"
+             android:layout_toStartOf="@id/sendBtn"
+            app:tint="@color/black" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:elevation="0dp"
+            app:fabSize="normal"
+            android:src="@drawable/ic_send_white"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

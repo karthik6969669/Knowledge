@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.AccountFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileIv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGray01"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_white"
+            app:shapeAppearanceOverlay="@style/ImageStyle_circle" />
+
+        <TextView
+            android:id="@+id/nameLabelTv"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/profileIv"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileIv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="22dp"
+            android:text="Full Name"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+        <TextView
+            android:id="@+id/emailLabelTv"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameLabelTv"
+            android:layout_marginTop="10dp"
+            android:text="Email" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameLabelTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:text="example@example.com" />
+
+        <TextView
+            android:id="@+id/dobLabelTv"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailLabelTv"
+            android:layout_marginTop="10dp"
+            android:text="DOB" />
+
+        <TextView
+            android:id="@+id/dobTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailLabelTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:text="dd/MM/yyyy" />
+
+        <TextView
+            android:id="@+id/memberSinceLabelTv"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dobLabelTv"
+            android:layout_marginTop="10dp"
+            android:text="Member Since" />
+
+        <TextView
+            android:id="@+id/memberSinceTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dobLabelTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:text="dd/MM/yyyy" />
+
+        <TextView
+            android:id="@+id/verificationStatusLabelTv"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/memberSinceLabelTv"
+            android:layout_marginTop="10dp"
+            android:text="Account Status" />
+
+        <TextView
+            android:id="@+id/verificationTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/memberSinceLabelTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:text="Not Verified"
+            android:textColor="@color/purple_700" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verificationStatusLabelTv"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Preferences" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/logoutCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="16dp"> <!-- Increased content padding -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:drawableStart="@drawable/ic_power_gray"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:drawableEnd="@drawable/ic_next_gray" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/editProfileCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="16dp"> <!-- Increased content padding -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_person_gray"
+                    android:text="Edit Profile"
+                    android:drawablePadding="10dp"
+                    android:drawableEnd="@drawable/ic_next_gray" />
+
+            </com.google.android.material.card.MaterialCardView>
+            
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/verifyAccountCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_verified_gray"
+                    android:text="Verify Account"
+                    android:drawableEnd="@drawable/ic_next_gray"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/deleteAccountCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_delete_gray"
+                android:text="Delete Account"
+                android:drawableEnd="@drawable/ic_next_gray"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

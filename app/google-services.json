@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "757191755326",
+    "project_id": "olx-java-e356b",
+    "storage_bucket": "olx-java-e356b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757191755326:android:9bb15a92a654322bac336f",
+        "android_client_info": {
+          "package_name": "com.example.myapplicationtt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2Q2V7CcLE_ah0KwWzD46r7oFvj4_wGNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

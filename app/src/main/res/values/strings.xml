@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">knowledge</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_chats">Chats</string>
+    <string name="menu_sell">Sell</string>
+    <string name="menu_my_ads">My Adds</string>
+    <string name="menu_account">Account</string>
+    <string name="sell_fab_description">Sell in item</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="close_button_description">Close</string>
+    <string name="back_button_desc">Back</string>
+    <string name="add_photo_desc">add photo</string>
+    <string name="not_have_account_register">Not Have an Account?<b>Register</b></string>
+    <string name="already_have_an_account_login">Already Have An Account?<b>Login</b></string>
+    <string name="default_web_client_id">757191755326-6datmiscsr1dhc3v25itgagdm29i1cjn.apps.googleusercontent.com</string>
+    <string name="forgot_password_recover">Forgot Password?<b>Recover</b></string>
+    <string name="back_button_description">Back</string>
+    <string name="category_autocomplete_desc">Select a category</string>
+    <string name="location_autocomplete_desc">Select a location</string>
+    <string name="add_image_button_desc">Add an image</string>
+    <string name="post_ad_button_text">POST ADD</string>
+    <string name="tool_bar_gps_button_desc">tool bar gps </string>
+    <string name="google_map_api_key">AIzaSyCbHVc4Vgkv2mJsNyfIdOEYMStaZJE_MZc</string>
+    <string name="price_symbol">₹</string>
+
+
+</resources>
